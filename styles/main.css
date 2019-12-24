@@ -1,3 +1,89 @@
-header{
-    color: red;
+/* MAIN STYLING */
+*{
+    font-family: 'Courier Prime', monospace;
+    color: white;
+}
+body{
+    background-color: #005E7C;
+    /* filter: blur(8px); */
+}
+.main-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 98vh;
+}
+
+/* NAVIGATION */
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-burger{
+    display: inline-block;
+    width: 70px;
+}
+.nav-burger__slice{
+    height: 8px;
+    background-color: white;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+.nav-blocks{
+    display: flex;
+}
+.nav-blocks__block{
+    background-color: white;
+    width: 34px;
+    height: 34px;
+    margin-left: 10px;
+}
+
+.nav-blocks__block--active{
+    background-color: #0096B3;
+}
+
+/* MAIN CONTENT */
+
+.maincontent{
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.maincontent__name{
+    font-size: 30px;
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+.maincontent__logo{
+  display: flex;
+  justify-content: center;
+}
+.maincontent__letter--a img{
+    height: auto;
+    width: 110px;
+    margin-right: -33px;
+}
+.maincontent__letter--w img{
+    height: auto;
+    width: 180px;
+    margin-left: -33px;
+}
+/* FOOTER */
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.github{
+
+}
+.github img{
+    height: 30px;
+    width: auto;
+    padding: 20px;
 }
