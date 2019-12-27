@@ -27,6 +27,8 @@ $(document).ready(function(){
         const link = event.target.getAttribute('href').slice(1)
         let content;
 
+        $(".nav-blocks__block").removeClass('nav-blocks__block--active').animate({backgroundColor: '#fff'}, 300);
+
         switch(link){
             case 'home':
                 content = `<p class="maincontent__name">Aleksander Wojas</p>
@@ -43,7 +45,8 @@ $(document).ready(function(){
                 content = `<p class="maincontent__name">My name is Olek, im 31 years old.
                 Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I decided to discover the world of writing code. It appears to be pretty tough, very challenging and it looks like never ending journey. So I've decided to get on this train ;) </p>`
                 break;
-        }        
+        }
+        $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 1000);        
         $(".maincontent").html(content).css("display", "none").fadeIn(1500);
     })
 
