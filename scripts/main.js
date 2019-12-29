@@ -45,6 +45,22 @@ $(document).ready(function(){
                 content = `<p class="maincontent__name">My name is Olek, im 31 years old.
                 Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I decided to discover the world of writing code. It appears to be pretty tough, very challenging and it looks like never ending journey. So I've decided to get on this train ;) </p>`
                 break;
+            case 'tools':
+                content = `<div class="utility">
+                <div class="utility__block"><img src="/images/loga/html5.png"></div>
+                <div class="utility__block"><img src="/images/loga/css3.png"></div>
+                <div class="utility__block"><img src="/images/loga/js.png"></div>
+                <div class="utility__block"><img src="/images/loga/react.png"></div>
+                <div class="utility__block"><img src="/images/loga/jquery.png"></div>
+                <div class="utility__block"><img src="/images/loga/git.png"></div>
+                <div class="utility__block"><img src="/images/loga/node.png"></div>
+                <div class="utility__block"><img src="/images/loga/Npm.png"></div>
+                <div class="utility__block"><img src="/images/loga/mongo.png"></div>
+                <div class="utility__block"><img src="/images/loga/xd.png"></div>
+                <div class="utility__block"><img src="/images/loga/ps.png"></div>
+                <div class="utility__block"><img src="/images/loga/Bootstrap.png"></div>
+            </div>`
+            break;
         }
         $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 1000);        
         $(".maincontent").html(content).css("display", "none").fadeIn(1500);

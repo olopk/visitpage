@@ -114,6 +114,24 @@ body{
     width: 180px;
     margin-left: -33px;
 }
+.utility{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.utility__block{
+    display: inline;
+    width: 25%;
+    padding-bottom: 2%;
+}
+.utility__block:nth-child(3n+2){
+    padding: 0% 2% 2% 2%;
+}
+.utility__block img{
+    height: auto;
+    width: 100%;
+}
 /* FOOTER */
 
 footer{
