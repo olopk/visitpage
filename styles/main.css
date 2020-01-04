@@ -61,7 +61,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
 .nav-burger{
     display: inline-block;
     width: 70px;
@@ -88,13 +87,13 @@ body{
 } */
 
 /* MAIN CONTENT */
-
 .maincontent{
     padding: 0px 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
+/* HOME */
 .maincontent__name{
     font-size: 30px;
     text-align: center;
@@ -114,6 +113,7 @@ body{
     width: 180px;
     margin-left: -33px;
 }
+/* UTILS */
 .utility{
     display: flex;
     flex-direction: row;
@@ -132,6 +132,47 @@ body{
     height: auto;
     width: 100%;
 }
+/* CONTACT */
+.contact{
+
+}
+.contact_form{
+  
+}
+
+.contact_form label{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+.contact_input, .contact_textarea{
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #005E7C;
+    padding: 5px;
+}
+.contact_textarea{
+    resize: none;
+}
+.contact_btn{
+    background-color: #0096B3;
+    width: 48%;
+    box-sizing: border-box;
+    border: 0px;
+    height: 30px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.contact_btn--reset{
+    background-color: #879eb3;
+}
+
 /* FOOTER */
 
 footer{

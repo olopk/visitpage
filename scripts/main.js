@@ -9,17 +9,17 @@ $(document).ready(function(){
             $(".main-container").removeClass("main-container--blur");
         }
     })
-    $(".maincontent").html(
-        `<p class="maincontent__name">Aleksander Wojas</p>
-        <div class="maincontent__logo">
-            <div class="maincontent__letter--a">
-                <img src="/images/A.png" alt="A">
-            </div>
-            <div class="maincontent__letter--w">
-                <img src="/images/W.png" alt="W">
-            </div>
-        </div>`
-    )
+    // $(".maincontent").html(
+    //     `<p class="maincontent__name">Aleksander Wojas</p>
+    //     <div class="maincontent__logo">
+    //         <div class="maincontent__letter--a">
+    //             <img src="/images/A.png" alt="A">
+    //         </div>
+    //         <div class="maincontent__letter--w">
+    //             <img src="/images/W.png" alt="W">
+    //         </div>
+    //     </div>`
+    // )
     $(".maincontent__letter--a img").delay(1200).animate({'margin-right': '-33px'}, 1000)
     
     $(".sidedrawer__nav ul li a").click(()=>{
@@ -66,4 +66,24 @@ $(document).ready(function(){
         $(".maincontent").html(content).css("display", "none").fadeIn(1500);
     })
 
+    $(".contact_btn--send").click(() => {
+        event.preventDefault();
+        console.log('gowno')
+        Email.send({
+            // Host : "smtp.gmail.com",
+            // Username : "pk.skany@gmail.com",
+            // Password : "Skany2019!@",
+            SecureToken: "623c8810-9616-49ab-8f96-72296b6d1361",
+            To : 'olekwojas@gmail.com',
+            From : "pk.skany@gmail.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+          message => alert(message)
+        );
+    })
+    $(".contact_btn--reset").click(() => {
+        event.preventDefault();
+        $(".contact_input, .contact_textarea").val("");
+    })
 })
