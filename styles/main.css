@@ -133,12 +133,6 @@ body{
     width: 100%;
 }
 /* CONTACT */
-.contact{
-
-}
-.contact_form{
-  
-}
 
 .contact_form label{
     display: block;
@@ -150,6 +144,7 @@ body{
     width: 100%;
     box-sizing: border-box;
     display: block;
+    border: none;
     border-radius: 3px;
     font-size: 20px;
     margin-bottom: 20px;
@@ -185,6 +180,20 @@ body{
 .contact_response p{
     margin: 0;
 }
+/* PROJECTS */
+.project{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 20px 0px;
+}
+.project img{
+    width: 290px;
+    border-radius: 5px;
+}
+
+
+
 /* LOADER SPINNER */
 .loader {
     font-size: 10px;

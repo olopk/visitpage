@@ -31,36 +31,57 @@ $(document).ready(function(){
 
         switch(link){
             case 'home':
-                content = `<p class="maincontent__name">Aleksander Wojas</p>
-                <div class="maincontent__logo">
-                    <div class="maincontent__letter--a">
-                        <img src="/images/A.png" alt="A">
-                    </div>
-                    <div class="maincontent__letter--w">
-                        <img src="/images/W.png" alt="W">
-                    </div>
-                </div>`
+                content = `
+                    <p class="maincontent__name">Aleksander Wojas</p>
+                    <div class="maincontent__logo">
+                        <div class="maincontent__letter--a">
+                            <img src="/images/A.png" alt="A">
+                        </div>
+                        <div class="maincontent__letter--w">
+                            <img src="/images/W.png" alt="W">
+                        </div>
+                    </div>`
                 break;
             case 'about':
                 content = `<p class="maincontent__name">My name is Olek, im 31 years old.
                 Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I decided to discover the world of writing code. It appears to be pretty tough, very challenging and it looks like never ending journey. So I've decided to get on this train ;) </p>`
                 break;
             case 'tools':
-                content = `<div class="utility">
-                <div class="utility__block"><img src="/images/loga/html5.png"></div>
-                <div class="utility__block"><img src="/images/loga/css3.png"></div>
-                <div class="utility__block"><img src="/images/loga/js.png"></div>
-                <div class="utility__block"><img src="/images/loga/react.png"></div>
-                <div class="utility__block"><img src="/images/loga/jquery.png"></div>
-                <div class="utility__block"><img src="/images/loga/git.png"></div>
-                <div class="utility__block"><img src="/images/loga/node.png"></div>
-                <div class="utility__block"><img src="/images/loga/Npm.png"></div>
-                <div class="utility__block"><img src="/images/loga/mongo.png"></div>
-                <div class="utility__block"><img src="/images/loga/xd.png"></div>
-                <div class="utility__block"><img src="/images/loga/ps.png"></div>
-                <div class="utility__block"><img src="/images/loga/Bootstrap.png"></div>
-            </div>`
+                content = `
+                <div class="utility">
+                    <div class="utility__block"><img src="/images/loga/html5.png"></div>
+                    <div class="utility__block"><img src="/images/loga/css3.png"></div>
+                    <div class="utility__block"><img src="/images/loga/js.png"></div>
+                    <div class="utility__block"><img src="/images/loga/react.png"></div>
+                    <div class="utility__block"><img src="/images/loga/jquery.png"></div>
+                    <div class="utility__block"><img src="/images/loga/git.png"></div>
+                    <div class="utility__block"><img src="/images/loga/node.png"></div>
+                    <div class="utility__block"><img src="/images/loga/Npm.png"></div>
+                    <div class="utility__block"><img src="/images/loga/mongo.png"></div>
+                    <div class="utility__block"><img src="/images/loga/xd.png"></div>
+                    <div class="utility__block"><img src="/images/loga/ps.png"></div>
+                    <div class="utility__block"><img src="/images/loga/Bootstrap.png"></div>
+                </div>`
             break;
+            case 'contact':
+                content = `
+                    <div class="contact">
+                        <form class="contact_form">
+                            <label for="name">name</label>
+                            <input class="contact_input" name="name" id="name"/>
+                            <label>email</label>
+                            <input class="contact_input" name="email" id="email"/>
+                            <label>contact nr</label>
+                            <input class="contact_input" name="nr" id="nr"/>
+                            <label>message</label>
+                            <textarea class="contact_textarea" rows="5" name="message" id="message"></textarea>
+                            <div style="display: flex; justify-content: space-between;">
+                                <button class="contact_btn contact_btn--reset">CLEAR</button>
+                                <button class="contact_btn contact_btn--send">SEND</button>
+                            </div>
+                        </form>
+                    </div>`
+                break;
         }
         $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 1000);        
         $(".maincontent").html(content).css("display", "none").fadeIn(1500);
