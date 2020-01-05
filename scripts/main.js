@@ -68,19 +68,38 @@ $(document).ready(function(){
 
     $(".contact_btn--send").click(() => {
         event.preventDefault();
-        console.log('gowno')
+        const content = $(".maincontent").html();
+        const name = $("#name").val();
+        const email = $("#email").val();
+        const phone = $("#nr").val();
+        const msg = $("#message").val();
+
+        $(".maincontent").html(`
+            <div class="loader">Loading...</div>
+        `)
         Email.send({
-            // Host : "smtp.gmail.com",
-            // Username : "pk.skany@gmail.com",
-            // Password : "Skany2019!@",
-            SecureToken: "623c8810-9616-49ab-8f96-72296b6d1361",
+            SecureToken: "7e3f3b6e-0b50-4b5c-b759-4541f5848fc4",
             To : 'olekwojas@gmail.com',
-            From : "pk.skany@gmail.com",
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
+            From : "a.wojas@o-it.pl",
+            Subject : "Formularz kontaktowy z CV-page",
+            Body : `name: ${name}, email: ${email}, nr: ${phone}, message: ${msg}`
+        }).then(message => {
+            if(message == 'OK'){
+                const resp = `<div class="contact_response"><p>Message sent successfully!</p></div></div>`
+                $(".maincontent").html(content)
+                $(resp).insertBefore(".maincontent");
+            }else{
+                const resp = `<div class="contact_response contact_response--fail"><p>Something went wrong!</p><p>error code: ${message}</p></div></div>`
+                $(resp).insertBefore(".maincontent");
+                $(".maincontent").html(content)
+                $("#name").val(name);
+                $("#email").val(email);
+                $("#nr").val(phone);
+                $("#message").val(msg);                
+            }
+        }).catch(err => {
+            $(".maincontent").html(`<div class="contact_response"><p>Something went wrong, try later or send me the error beneath to olekwojas@gmail.com, thank you!.</p><p>${err}</p></div>`)
+        })
     })
     $(".contact_btn--reset").click(() => {
         event.preventDefault();
