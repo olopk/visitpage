@@ -92,6 +92,7 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 /* HOME */
 .maincontent__name{
@@ -181,14 +182,41 @@ body{
     margin: 0;
 }
 /* PROJECTS */
+.arrow{
+    display: flex;
+    justify-content: center;
+}
+.arrow img{
+    width: 40px;
+}
+.arrow:last-of-type{
+    position: relative;
+    animation: arrow-down 5s infinite;
+}
+@keyframes arrow-down{
+    0%   {top: 0px;}
+    25%  {top: 0px;}
+    50%  {top: 0px}
+    75%  {top: 10px;}
+    100% {top: 0px;}
+}
+.projects{
+    max-height: 63vh;
+    overflow: scroll;
+    -ms-overflow-style: none;
+}
+.projects::-webkit-scrollbar {
+    display: none;
+  }
 .project{
     display: flex;
     justify-content: center;
     border-radius: 5px;
-    margin: 20px 0px;
+    margin: 3vh 0px;
 }
 .project img{
-    width: 290px;
+    /* width: 270px; */
+    max-height: 17vh;
     border-radius: 5px;
 }
 
