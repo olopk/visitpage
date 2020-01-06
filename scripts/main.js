@@ -126,4 +126,14 @@ $(document).ready(function(){
         event.preventDefault();
         $(".contact_input, .contact_textarea").val("");
     })
+    $("#arrow-down").click(()=>{
+        const scrollValue = window.innerHeight * 0.63;
+        const currentScroll = $(".projects").scrollTop();
+        $(".projects").animate({scrollTop: currentScroll+scrollValue}, 800)
+    })
+    $("#arrow-up").click(()=>{
+        const scrollValue = window.innerHeight * 0.63;
+        const currentScroll = $(".projects").scrollTop();
+        $(".projects").animate({scrollTop: currentScroll-scrollValue}, 800)
+    })
 })
