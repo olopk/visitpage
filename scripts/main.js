@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    // SIDEDRAWER LOGIC
+
     $(".nav-burger").click(()=>{
         $(".main-container").addClass("main-container--blur");
         $(".sidedrawer").addClass("sidedrawer--visible");
@@ -9,6 +11,9 @@ $(document).ready(function(){
             $(".main-container").removeClass("main-container--blur");
         }
     })
+
+    // DEFAULT MAINCONTENT SET
+
     // $(".maincontent").html(
     //     `<p class="maincontent__name">Aleksander Wojas</p>
     //     <div class="maincontent__logo">
@@ -22,6 +27,7 @@ $(document).ready(function(){
     // )
     $(".maincontent__letter--a img").delay(1200).animate({'margin-right': '-33px'}, 1000)
     
+    // RENDERING THE PROPER CONTENT DEPEND ON CLICKED LINK
     $(".sidedrawer__nav ul li a").click(()=>{
         event.preventDefault();
         const link = event.target.getAttribute('href').slice(1)
@@ -86,7 +92,8 @@ $(document).ready(function(){
         $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 1000);        
         $(".maincontent").html(content).css("display", "none").fadeIn(1500);
     })
-
+    // CONTACT FORM LOGIC
+    // SENDING MSG
     $(".contact_btn--send").click(() => {
         event.preventDefault();
         const content = $(".maincontent").html();
@@ -122,10 +129,13 @@ $(document).ready(function(){
             $(".maincontent").html(`<div class="contact_response"><p>Something went wrong, try later or send me the error beneath to olekwojas@gmail.com, thank you!.</p><p>${err}</p></div>`)
         })
     })
+    // CLEAR FORM
     $(".contact_btn--reset").click(() => {
         event.preventDefault();
         $(".contact_input, .contact_textarea").val("");
     })
+    // PROJECTS SCROLLING
+
     $("#arrow-down").click(()=>{
         const scrollValue = window.innerHeight * 0.63;
         const currentScroll = $(".projects").scrollTop();
@@ -136,4 +146,15 @@ $(document).ready(function(){
         const currentScroll = $(".projects").scrollTop();
         $(".projects").animate({scrollTop: currentScroll-scrollValue}, 800)
     })
+
+    // PROJECT HOVER ACTION
+    $('.project').hover(()=>{
+        //hover in
+        console.log('hover in')
+        $('.project').children('.project_box').children('.project_hoverbox').css('visibility', 'visible')
+    }, ()=>{
+        //hover out
+        console.log('hover out')
+        $('.project').children('.project_box').children('.project_hoverbox').css('visibility', 'hidden')
+    });
 })
