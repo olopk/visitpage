@@ -229,8 +229,7 @@ body{
     filter: blur(2px);
 }
 .project_hoverbox{
-    visibility: hidden;
-    display: flex;
+    display: none;
     border-radius: 5px;
     width: 70vw;
     height: 100%;
@@ -238,18 +237,19 @@ body{
     position: absolute;
     top: 0;
 }
-.hoverbox_block{
+.project_hoverbox a{
     width: 50%;
     height: 98%;
+    /* border-radius: 5px; */
     border: 1px solid #005E7C;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
-.hoverbox_block span{
+.project_hoverbox a span{
     color: #005E7C;
     font-size: 12vw;
-    text-transform: capitalize;
 }
 .project_text{
     display: none;

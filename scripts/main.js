@@ -148,13 +148,26 @@ $(document).ready(function(){
     })
 
     // PROJECT HOVER ACTION
-    $('.project').hover(()=>{
-        //hover in
-        console.log('hover in')
-        $('.project').children('.project_box').children('.project_hoverbox').css('visibility', 'visible')
-    }, ()=>{
-        //hover out
-        console.log('hover out')
-        $('.project').children('.project_box').children('.project_hoverbox').css('visibility', 'hidden')
-    });
+    // $('.project').click(()=>{
+    //     //hover in
+    //     // console.log('hover in')
+    //     $('.project').children('.project_box').children('.project_hoverbox').css('visibility', 'visible')
+    // })
+    $('.maincontent').click((e)=>{
+        if($(e.target).parent().is('.project_box')){
+            $(e.target).siblings('.project_hoverbox').css('display', 'flex').hide().fadeIn('slow')
+            $(e.target).parent().siblings($('.project_text')).fadeIn('slow')
+            return
+        }
+        // if($(e.target).is)
+            $('.project_hoverbox').css('display') !== 'none' ? $('.project_hoverbox').fadeOut('slow') : null 
+            $('.project_text').css('display') !== 'none' ? $('.project_text').fadeOut('slow') : null
+    })
+
+    // , ()=>{
+    //     //hover out
+    //     console.log('hover out')
+    //     $('.project').children('.project_box').children('.project_hoverbox').css('visibility', 'hidden')
+    // }
+    // );
 })
