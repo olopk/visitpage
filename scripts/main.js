@@ -14,26 +14,26 @@ $(document).ready(function(){
 
     // DEFAULT MAINCONTENT SET
 
-    // $(".maincontent").html(
-    //     `<p class="maincontent__name">Aleksander Wojas</p>
-    //     <div class="maincontent__logo">
-    //         <div class="maincontent__letter--a">
-    //             <img src="/images/A.png" alt="A">
-    //         </div>
-    //         <div class="maincontent__letter--w">
-    //             <img src="/images/W.png" alt="W">
-    //         </div>
-    //     </div>`
-    // )
+    $(".maincontent").html(
+        `<p class="maincontent__name">Aleksander Wojas</p>
+        <div class="maincontent__logo">
+            <div class="maincontent__letter--a">
+                <img src="/images/A.png" alt="A">
+            </div>
+            <div class="maincontent__letter--w">
+                <img src="/images/W.png" alt="W">
+            </div>
+        </div>`
+    )
     $(".maincontent__letter--a img").delay(1200).animate({'margin-right': '-33px'}, 1000)
     
     // RENDERING THE PROPER CONTENT DEPEND ON CLICKED LINK
-    $(".sidedrawer__nav ul li a").click(()=>{
+    $(".sidedrawer__nav ul li a, .nav-blocks__block").click(()=>{
         event.preventDefault();
         const link = event.target.getAttribute('href').slice(1)
         let content;
 
-        $(".nav-blocks__block").removeClass('nav-blocks__block--active').animate({backgroundColor: '#fff'}, 300);
+        $(".nav-blocks__block").removeClass('nav-blocks__block--active').animate({backgroundColor: '#fff'}, 1000);
 
         switch(link){
             case 'home':
@@ -88,86 +88,151 @@ $(document).ready(function(){
                         </form>
                     </div>`
                 break;
+            case 'projects':
+                content = `
+                    <div class="arrow" id="arrow-up">
+                        <img src="/images/up.png">
+                    </div>
+                    <div class="projects">
+                        <div class="project">
+                            <div class="project_box">
+                                <img class="project_img"src="/images/projects/project1.png"/>
+                                <div class="project_hoverbox">
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>LIVE</span>
+                                    </a>
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>CODE</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project_text">Lorem ipsum dolor ament</p>
+                        </div>
+                        <div class="project">
+                            <div class="project_box">
+                                <img class="project_img"src="/images/projects/project2.png"/>
+                                <div class="project_hoverbox">
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>LIVE</span>
+                                    </a>
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>CODE</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project_text">Lorem ipsum dolor ament</p>
+                        </div>
+                        <div class="project">
+                            <div class="project_box">
+                                <img class="project_img"src="/images/projects/project1.png"/>
+                                <div class="project_hoverbox">
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>LIVE</span>
+                                    </a>
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>CODE</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project_text">Lorem ipsum dolor ament</p>
+                        </div>
+                        <div class="project">
+                            <div class="project_box">
+                                <img class="project_img"src="/images/projects/project2.png"/>
+                                <div class="project_hoverbox">
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>LIVE</span>
+                                    </a>
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>CODE</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project_text">Lorem ipsum dolor ament</p>
+                        </div>
+                    </div>
+                    <div class="arrow" id="arrow-down">
+                        <img src="/images/down.png">
+                    </div>
+                    `
+                    break;
         }
         $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 1000);        
         $(".maincontent").html(content).css("display", "none").fadeIn(1500);
     })
-    // CONTACT FORM LOGIC
-    // SENDING MSG
-    $(".contact_btn--send").click(() => {
-        event.preventDefault();
-        const content = $(".maincontent").html();
-        const name = $("#name").val();
-        const email = $("#email").val();
-        const phone = $("#nr").val();
-        const msg = $("#message").val();
+        
 
-        $(".maincontent").html(`
-            <div class="loader">Loading...</div>
-        `)
-        Email.send({
-            SecureToken: "7e3f3b6e-0b50-4b5c-b759-4541f5848fc4",
-            To : 'olekwojas@gmail.com',
-            From : "a.wojas@o-it.pl",
-            Subject : "Formularz kontaktowy z CV-page",
-            Body : `name: ${name}, email: ${email}, nr: ${phone}, message: ${msg}`
-        }).then(message => {
-            if(message == 'OK'){
-                const resp = `<div class="contact_response"><p>Message sent successfully!</p></div></div>`
-                $(".maincontent").html(content)
-                $(resp).insertBefore(".maincontent");
-            }else{
-                const resp = `<div class="contact_response contact_response--fail"><p>Something went wrong!</p><p>error code: ${message}</p></div></div>`
-                $(resp).insertBefore(".maincontent");
-                $(".maincontent").html(content)
-                $("#name").val(name);
-                $("#email").val(email);
-                $("#nr").val(phone);
-                $("#message").val(msg);                
-            }
-        }).catch(err => {
-            $(".maincontent").html(`<div class="contact_response"><p>Something went wrong, try later or send me the error beneath to olekwojas@gmail.com, thank you!.</p><p>${err}</p></div>`)
-        })
-    })
-    // CLEAR FORM
-    $(".contact_btn--reset").click(() => {
-        event.preventDefault();
-        $(".contact_input, .contact_textarea").val("");
-    })
-    // PROJECTS SCROLLING
-
-    $("#arrow-down").click(()=>{
+// MAINCONTENT ONCLICK ACTIONS
+    $('.maincontent').click((e)=>{
+    //PROJECTS SECTION
+        // PROJECTS SCROLLING
+    if($(e.target).is("#arrow-down img, #arrow-down")){
         const scrollValue = window.innerHeight * 0.63;
         const currentScroll = $(".projects").scrollTop();
         $(".projects").animate({scrollTop: currentScroll+scrollValue}, 800)
-    })
-    $("#arrow-up").click(()=>{
+    }
+    if($(e.target).is("#arrow-up img, #arrow-up")){
         const scrollValue = window.innerHeight * 0.63;
         const currentScroll = $(".projects").scrollTop();
         $(".projects").animate({scrollTop: currentScroll-scrollValue}, 800)
-    })
+    }
+        //SHOWING AND HIDING PROJECTS INFO
+    if($(e.target).parent().is('.project_box')){
+        $('.project_hoverbox').fadeOut('slow')
+        $('.project_text').slideUp('slow')
+        $(e.target).siblings('.project_hoverbox').css('display', 'flex').hide().fadeIn('slow')
+        $(e.target).parent().siblings($('.project_text')).slideDown('slow')
+        return
+    }
+    if($('.maincontent').has('.projects')){
+        $('.project_hoverbox').fadeOut('slow')
+        $('.project_text').slideUp('slow')
+        return;
+    }
 
-    // PROJECT HOVER ACTION
-    // $('.project').click(()=>{
-    //     //hover in
-    //     // console.log('hover in')
-    //     $('.project').children('.project_box').children('.project_hoverbox').css('visibility', 'visible')
-    // })
-    $('.maincontent').click((e)=>{
-        if($(e.target).parent().is('.project_box')){
-            $(e.target).siblings('.project_hoverbox').css('display', 'flex').hide().fadeIn('slow')
-            $(e.target).parent().siblings($('.project_text')).fadeIn('slow')
-            return
+    // CONTACT FORM SECTION
+        // SENDING MSG
+        if($(e.target).is(".contact_btn--send")){
+            event.preventDefault();
+            const content = $(".maincontent").html();
+            const name = $("#name").val();
+            const email = $("#email").val();
+            const phone = $("#nr").val();
+            const msg = $("#message").val();
+
+            $(".maincontent").html(`
+                <div class="loader">Loading...</div>
+            `)
+            Email.send({
+                SecureToken: "7e3f3b6e-0b50-4b5c-b759-4541f5848fc4",
+                To : 'olekwojas@gmail.com',
+                From : "a.wojas@o-it.pl",
+                Subject : "Formularz kontaktowy z CV-page",
+                Body : `name: ${name}, email: ${email}, nr: ${phone}, message: ${msg}`
+            }).then(message => {
+                if(message == 'OK'){
+                    const resp = `<div class="contact_response"><p>Message sent successfully!</p></div></div>`
+                    $(".maincontent").html(content)
+                    $(resp).insertBefore(".maincontent");
+                }else{
+                    const resp = `<div class="contact_response contact_response--fail"><p>Something went wrong!</p><p>error code: ${message}</p></div></div>`
+                    $(resp).insertBefore(".maincontent");
+                    $(".maincontent").html(content)
+                    $("#name").val(name);
+                    $("#email").val(email);
+                    $("#nr").val(phone);
+                    $("#message").val(msg);                
+                }
+            }).catch(err => {
+                $(".maincontent").html(`<div class="contact_response"><p>Something went wrong, try later or send me the error beneath to olekwojas@gmail.com, thank you!.</p><p>${err}</p></div>`)
+            })
+            return;
         }
-        // if($(e.target).is)
-            $('.project_hoverbox').css('display') !== 'none' ? $('.project_hoverbox').fadeOut('slow') : null 
-            $('.project_text').css('display') !== 'none' ? $('.project_text').fadeOut('slow') : null
+        // CLEARING FORM
+        if($(e.target).is(".contact_btn--reset")){
+            event.preventDefault();
+            $(".contact_input, .contact_textarea").val("");
+            return;
+        }
     })
-
-    // , ()=>{
-    //     //hover out
-    //     console.log('hover out')
-    //     $('.project').children('.project_box').children('.project_hoverbox').css('visibility', 'hidden')
-    // }
-    // );
 })
