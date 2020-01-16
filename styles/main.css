@@ -82,9 +82,9 @@ body{
     margin-left: 10px;
 }
 
-/* .nav-blocks__block--active{
+.nav-blocks__block--active{
     background-color: #0096B3;
-} */
+}
 
 /* MAIN CONTENT */
 .maincontent{
@@ -105,14 +105,17 @@ body{
   justify-content: center;
 }
 .maincontent__letter--a img{
-    height: auto;
-    width: 110px;
-    margin-right: 0px;
+    height: 100px;
+    margin-right: -33px;
 }
 .maincontent__letter--w img{
-    height: auto;
-    width: 180px;
+    height: 100px;
     margin-left: -33px;
+}
+/* ABOUT */
+.maincontent__about{
+    font-size: 23px;
+    text-align: center;
 }
 /* UTILS */
 .utility{
@@ -335,5 +338,36 @@ footer{
 .github img{
     height: 30px;
     width: auto;
-    padding: 20px;
+    padding: 0px 20px;
+}
+
+@media screen and (min-width: 665px) {
+    /* html{
+        box-sizing: border-box;
+    } */
+    body{
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .main-container{
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .maincontent{
+        padding: 10px 20px;
+        align-items: center;
+    }
+    .maincontent__name{
+        margin: 0 0 20px 0;
+    }
+    .utility{
+        width: 70%;
+    }
+    .utility__block{
+        width: 15%;
+        margin-right: 2%;
+    }
+    .utility__block:nth-child(5n+5){
+        margin-right: 0;
+    }
 }

@@ -25,7 +25,7 @@ $(document).ready(function(){
             </div>
         </div>`
     )
-    $(".maincontent__letter--a img").delay(1200).animate({'margin-right': '-33px'}, 1000)
+    $(".maincontent__letter--a img").css('margin-right', '0px').delay(1200).animate({'margin-right': '-33px'}, 1000)
     
     // RENDERING THE PROPER CONTENT DEPEND ON CLICKED LINK
     $(".sidedrawer__nav ul li a, .nav-blocks__block").click(()=>{
@@ -49,7 +49,7 @@ $(document).ready(function(){
                     </div>`
                 break;
             case 'about':
-                content = `<p class="maincontent__name">My name is Olek, im 31 years old.
+                content = `<p class="maincontent__about">My name is Olek, im 31 years old.
                 Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I decided to discover the world of writing code. It appears to be pretty tough, very challenging and it looks like never ending journey. So I've decided to get on this train ;) </p>`
                 break;
             case 'tools':
@@ -59,14 +59,17 @@ $(document).ready(function(){
                     <div class="utility__block"><img src="/images/loga/css3.png"></div>
                     <div class="utility__block"><img src="/images/loga/js.png"></div>
                     <div class="utility__block"><img src="/images/loga/react.png"></div>
+                    <div class="utility__block"><img src="/images/loga/redux.png"></div>
+                    <div class="utility__block"><img src="/images/loga/graphql.png"></div>
                     <div class="utility__block"><img src="/images/loga/jquery.png"></div>
                     <div class="utility__block"><img src="/images/loga/git.png"></div>
-                    <div class="utility__block"><img src="/images/loga/node.png"></div>
                     <div class="utility__block"><img src="/images/loga/Npm.png"></div>
+                    <div class="utility__block"><img src="/images/loga/node.png"></div>
+                    <div class="utility__block"><img src="/images/loga/Bootstrap.png"></div>
                     <div class="utility__block"><img src="/images/loga/mongo.png"></div>
                     <div class="utility__block"><img src="/images/loga/xd.png"></div>
+                    <div class="utility__block"><img src="/images/loga/gimp.png"></div>
                     <div class="utility__block"><img src="/images/loga/ps.png"></div>
-                    <div class="utility__block"><img src="/images/loga/Bootstrap.png"></div>
                 </div>`
             break;
             case 'contact':
