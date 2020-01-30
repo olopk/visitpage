@@ -341,7 +341,7 @@ footer{
     padding: 0px 20px;
 }
 
-@media screen and (min-width: 665px) {
+@media screen and (min-width: 638px) {
     body{
         margin: 0;
         box-sizing: border-box;
