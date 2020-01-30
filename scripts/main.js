@@ -76,17 +76,23 @@ $(document).ready(function(){
                 content = `
                     <div class="contact">
                         <form class="contact_form">
-                            <label for="name">name</label>
-                            <input class="contact_input" name="name" id="name"/>
-                            <label>email</label>
-                            <input class="contact_input" name="email" id="email"/>
-                            <label>contact nr</label>
-                            <input class="contact_input" name="nr" id="nr"/>
-                            <label>message</label>
-                            <textarea class="contact_textarea" rows="5" name="message" id="message"></textarea>
-                            <div style="display: flex; justify-content: space-between;">
-                                <button class="contact_btn contact_btn--reset">CLEAR</button>
-                                <button class="contact_btn contact_btn--send">SEND</button>
+                            <div class="form__leftside">
+                                <label for="name">name</label>
+                                <input class="contact_input" name="name" id="name"/>
+                                <label for="email">email</label>
+                                <input class="contact_input" name="email" id="email"/>
+                                <label for="nr">contact nr</label>
+                                <input class="contact_input" name="nr" id="nr"/>
+                            </div>
+                            <div class="form__rightside">
+                                <div>
+                                    <label for="message">message</label>
+                                    <textarea class="contact_textarea" rows="5" name="message" id="message"></textarea>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                    <button class="contact_btn contact_btn--reset">CLEAR</button>
+                                    <button class="contact_btn contact_btn--send">SEND</button>
+                                </div>
                             </div>
                         </form>
                     </div>`

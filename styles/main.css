@@ -342,9 +342,6 @@ footer{
 }
 
 @media screen and (min-width: 665px) {
-    /* html{
-        box-sizing: border-box;
-    } */
     body{
         margin: 0;
         box-sizing: border-box;
@@ -354,7 +351,7 @@ footer{
         box-sizing: border-box;
     }
     .maincontent{
-        padding: 10px 20px;
+        padding: 20px 20px 5px 20px;
         align-items: center;
     }
     .maincontent__name{
@@ -369,5 +366,34 @@ footer{
     }
     .utility__block:nth-child(5n+5){
         margin-right: 0;
+    }
+    .projects{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-height: 46vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .project{
+        width: 50%;
+    }
+    .project_img, .project_hoverbox{
+        width: 42vw;
+    }
+    .project_hoverbox a span{
+        font-size: 7vw;
+    }
+    .contact{
+        width: 100%;
+    }
+    form{
+        display: flex;
+        justify-content: space-around;
+    }
+    .form__rightside{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
