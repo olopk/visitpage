@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // SIDEDRAWER LOGIC
 
-    $(".nav-burger").click(()=>{
+    $(".navbar__burger").click(()=>{
         $(".main-container").addClass("main-container--blur");
         $(".sidedrawer").addClass("sidedrawer--visible");
     })
@@ -28,7 +28,7 @@ $(document).ready(function(){
     $(".maincontent__letter--a img").css('margin-right', '0px').delay(1200).animate({'margin-right': '-33px'}, 1000)
     
     // RENDERING THE PROPER CONTENT DEPEND ON CLICKED LINK
-    $(".sidedrawer__nav ul li a, .nav-blocks__block").click(()=>{
+    $(".sidedrawer__nav ul li a, .navbar__nav ul li a,.nav-blocks__block").click(()=>{
         event.preventDefault();
         const link = event.target.getAttribute('href').slice(1)
         let content;
@@ -50,7 +50,10 @@ $(document).ready(function(){
                 break;
             case 'about':
                 content = `<p class="maincontent__about">My name is Olek, im 31 years old.
-                Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I decided to discover the world of writing code. It appears to be pretty tough, very challenging and it looks like never ending journey. So I've decided to get on this train ;) </p>`
+                Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I decided to discover the world of writing code. It appears to be pretty tough, very challenging and it looks like never ending journey. So I've decided to get on this train ;) </p>
+                <p class="maincontent__about">Until now i've created a couple of simple webpages for practising HTML5, CSS and JS basics . Next step was trying to write some simple web applications, so i followed the online courses about pure JS and ReactJS on Udemy and YT (i dont mention them in my portfolio because its meaningless to share somebodies else code wrote by me), and then ive started a comercial project (called Transport Reporting Tool), i wrote the Frontend code in React, and  my friend handled the backend. Now im working on my own private project, where im using React for frontend and Express for backend, the project will be a simple app for smallbussiness invoices handling</p>
+                <p class="maincontent__about">Privately, im very reliable, organized, punctual and logically oriented person. I need to learn and read new things because im hungry for the knowledge and selfimprovement. Im very active person who runs, swims, cycle, play football and takes cold bath in the lake once a week. My biggest achievement is saving a single person life by donating the stem cells four years ago.</p>
+                `
                 break;
             case 'tools':
                 content = `

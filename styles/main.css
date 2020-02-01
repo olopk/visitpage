@@ -57,16 +57,37 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
-.nav-container{
+.navbar__nav{
+    display: none;
+}
+.navbar__nav ul{
+    margin: 0;
+    padding: 0;
+}
+.navbar__nav ul li{
+  list-style: none;
+  text-align: center;
+  padding: 20px 30px;
+  display: inline-block;
+}
+.navbar__nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar__container{
     display: flex;
     justify-content: space-between;
 }
-.nav-burger{
+.navbar__burger{
     display: inline-block;
     width: 70px;
     /* z-index: 15; */
 }
-.nav-burger__slice{
+.burger__slice{
     height: 8px;
     background-color: white;
     margin-bottom: 5px;
@@ -361,8 +382,8 @@ footer{
         width: 70%;
     }
     .utility__block{
-        width: 15%;
-        margin-right: 2%;
+        width: 12%;
+        margin-right: 5%;
     }
     .utility__block:nth-child(5n+5){
         margin-right: 0;
@@ -395,5 +416,65 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar__burger{
+        display: none;
+    }
+    .navbar__nav{
+        display: block;
+    }
+    .nav-blocks{
+        margin: 15px;
+    }
+    .nav-blocks__block {
+        width: 40px;
+        height: 40px;
+    }
+    .maincontent__name{
+        font-size: 40px;
+    }
+    .maincontent__letter--a img {
+        height: 130px;
+        /* margin-left: -54px; */
+    }
+    .maincontent__letter--w img {
+        height: 130px;
+        margin-left: -54px;
+    }
+    .maincontent__about{
+        padding: 10px 150px;
+        text-align: justify;
+        text-indent: 30px;
+        margin: 0;
+    }
+    .projects{
+        max-height: 60vh;
+    }
+    .project {
+        width: 30%;
+    }
+    .project_img, .project_hoverbox {
+        width: 27vw;
+    }
+    .project_hoverbox a span {
+        font-size: 4vw;
+    }
+    .arrow{
+        display: none;
+    }
+    .contact {
+        width: 60%;
+    }
+    .contact_input, .contact_textarea, label{
+        font-size: 26px;
+    }
+    .contact_input, .contact_textarea{
+        padding: 12px;
+    }
+    .github img{
+        height: 40px;
     }
 }
