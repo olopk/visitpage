@@ -196,7 +196,7 @@ $(document).ready(function(){
         $(e.target).parent().siblings($('.project_text')).slideDown('slow')
         return
     }
-    if($('.maincontent').has('.projects')){
+    if($('.maincontent').has('.projects').length){
         $('.project_hoverbox').fadeOut('slow')
         $('.project_text').slideUp('slow')
         return;
@@ -225,7 +225,7 @@ $(document).ready(function(){
                 if(message == 'OK'){
                     const resp = `<div class="contact_response"><p>Message sent successfully!</p></div></div>`
                     $(".maincontent").html(content)
-                    $(resp).insertBefore(".maincontent");
+                    $(resp).insertBefore(".contact");
                 }else{
                     const resp = `<div class="contact_response contact_response--fail"><p>Something went wrong!</p><p>error code: ${message}</p></div></div>`
                     $(resp).insertBefore(".maincontent");
