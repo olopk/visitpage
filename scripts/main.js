@@ -108,6 +108,36 @@ $(document).ready(function(){
                     <div class="projects">
                         <div class="project">
                             <div class="project_box">
+                                <img class="project_img"src="/images/projects/invoicecreator.png"/>
+                                <div class="project_hoverbox">
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>LIVE</span>
+                                    </a>
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>CODE</span>
+                                    </a>,
+                                </div>
+                            </div>
+                            <p class="project_text">Private project, still under construction.</p>
+                            <p class="project_text">Stack: HTML5, CSS3, JS, ReactJS, Redux, MongoDB, Express.JS</p>
+                        </div>
+                        <div class="project">
+                            <div class="project_box">
+                                <img class="project_img"src="/images/projects/trt.png"/>
+                                <div class="project_hoverbox">
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>LIVE</span>
+                                    </a>
+                                    <a href="http://www.onet.pl" target="_blank">
+                                        <span>CODE</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project_text">Commercial project, still under construction.</p>
+                            <p class="project_text">Stack: HTML5, CSS3, JS, ReactJS, Redux</p>
+                        </div>
+                        <div class="project">
+                            <div class="project_box">
                                 <img class="project_img"src="/images/projects/project1.png"/>
                                 <div class="project_hoverbox">
                                     <a href="http://www.onet.pl" target="_blank">
@@ -118,49 +148,53 @@ $(document).ready(function(){
                                     </a>
                                 </div>
                             </div>
-                            <p class="project_text">Lorem ipsum dolor ament</p>
+                            <p class="project_text">Commercial webpage.</p>
+                            <p class="project_text">Stack: HTML5, CSS3, JS, JQUERY</p>
+                        </div>
+                        <div class="project">
+                            <div class="project_box">
+                                <img class="project_img"src="/images/projects/hoteljan.png"/>
+                                <div class="project_hoverbox">
+                                    <a href="http://hoteljan.com.pl/pl/" target="_blank">
+                                        <span>LIVE</span>
+                                    </a>
+                                    <a style="cursor: not-allowed">
+                                        <span>CODE</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project_text">Commercial webpage.</p>
+                            <p class="project_text">Stack: HTML5, CSS3, JS, JQUERY</p>
                         </div>
                         <div class="project">
                             <div class="project_box">
                                 <img class="project_img"src="/images/projects/project2.png"/>
                                 <div class="project_hoverbox">
-                                    <a href="http://www.onet.pl" target="_blank">
+                                    <a href="https://olopk.github.io/project3/" target="_blank">
                                         <span>LIVE</span>
                                     </a>
-                                    <a href="http://www.onet.pl" target="_blank">
+                                    <a href="https://github.com/olopk/project3/" target="_blank">
                                         <span>CODE</span>
                                     </a>
                                 </div>
                             </div>
-                            <p class="project_text">Lorem ipsum dolor ament</p>
+                            <p class="project_text">Second learning project.</p>
+                            <p class="project_text">Stack: HTML5, CSS3, JS</p>
                         </div>
                         <div class="project">
                             <div class="project_box">
                                 <img class="project_img"src="/images/projects/project1.png"/>
                                 <div class="project_hoverbox">
-                                    <a href="http://www.onet.pl" target="_blank">
+                                    <a href="https://olopk.github.io/project2/" target="_blank">
                                         <span>LIVE</span>
                                     </a>
-                                    <a href="http://www.onet.pl" target="_blank">
+                                    <a href="https://github.com/olopk/project2" target="_blank">
                                         <span>CODE</span>
                                     </a>
                                 </div>
                             </div>
-                            <p class="project_text">Lorem ipsum dolor ament</p>
-                        </div>
-                        <div class="project">
-                            <div class="project_box">
-                                <img class="project_img"src="/images/projects/project2.png"/>
-                                <div class="project_hoverbox">
-                                    <a href="http://www.onet.pl" target="_blank">
-                                        <span>LIVE</span>
-                                    </a>
-                                    <a href="http://www.onet.pl" target="_blank">
-                                        <span>CODE</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="project_text">Lorem ipsum dolor ament</p>
+                            <p class="project_text">First learning project.</p>
+                            <p class="project_text">Stack: HTML5, CSS3, JS</p>
                         </div>
                     </div>
                     <div class="arrow" id="arrow-down">

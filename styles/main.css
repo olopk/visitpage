@@ -280,6 +280,8 @@ body{
 }
 .project_text{
     display: none;
+    text-align: center;
+    margin: 10px 0 0 0;
 }
 /* LOADER SPINNER */
 .loader {
@@ -378,6 +380,9 @@ footer{
     .maincontent__name{
         margin: 0 0 20px 0;
     }
+    .maincontent__about{
+        font-size: 19px;
+    }
     .utility{
         width: 70%;
     }
@@ -450,8 +455,11 @@ footer{
         text-indent: 30px;
         margin: 0;
     }
+    .utility{
+        width: 55%;
+    }
     .projects{
-        max-height: 60vh;
+        max-height: 70vh;
     }
     .project {
         width: 30%;
@@ -467,6 +475,12 @@ footer{
     }
     .contact {
         width: 60%;
+    }
+    .contact_form{
+        justify-content: center;
+    }
+    .form__leftside, .form__rightside{
+        margin: 20px;
     }
     .contact_input, .contact_textarea, label{
         font-size: 26px;
