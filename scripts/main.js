@@ -18,10 +18,10 @@ $(document).ready(function(){
         `<p class="maincontent__name">Aleksander Wojas</p>
         <div class="maincontent__logo">
             <div class="maincontent__letter--a">
-                <img src="/images/A.png" alt="A">
+                <img src="./images/A.png" alt="A">
             </div>
             <div class="maincontent__letter--w">
-                <img src="/images/W.png" alt="W">
+                <img src="./images/W.png" alt="W">
             </div>
         </div>`
     )
@@ -41,10 +41,10 @@ $(document).ready(function(){
                     <p class="maincontent__name">Aleksander Wojas</p>
                     <div class="maincontent__logo">
                         <div class="maincontent__letter--a">
-                            <img src="/images/A.png" alt="A">
+                            <img src="./images/A.png" alt="A">
                         </div>
                         <div class="maincontent__letter--w">
-                            <img src="/images/W.png" alt="W">
+                            <img src="./images/W.png" alt="W">
                         </div>
                     </div>`
                 break;
@@ -58,21 +58,21 @@ $(document).ready(function(){
             case 'tools':
                 content = `
                 <div class="utility">
-                    <div class="utility__block"><img src="/images/loga/html5.png"></div>
-                    <div class="utility__block"><img src="/images/loga/css3.png"></div>
-                    <div class="utility__block"><img src="/images/loga/js.png"></div>
-                    <div class="utility__block"><img src="/images/loga/react.png"></div>
-                    <div class="utility__block"><img src="/images/loga/redux.png"></div>
-                    <div class="utility__block"><img src="/images/loga/graphql.png"></div>
-                    <div class="utility__block"><img src="/images/loga/jquery.png"></div>
-                    <div class="utility__block"><img src="/images/loga/git.png"></div>
-                    <div class="utility__block"><img src="/images/loga/Npm.png"></div>
-                    <div class="utility__block"><img src="/images/loga/node.png"></div>
-                    <div class="utility__block"><img src="/images/loga/Bootstrap.png"></div>
-                    <div class="utility__block"><img src="/images/loga/mongo.png"></div>
-                    <div class="utility__block"><img src="/images/loga/xd.png"></div>
-                    <div class="utility__block"><img src="/images/loga/gimp.png"></div>
-                    <div class="utility__block"><img src="/images/loga/ps.png"></div>
+                    <div class="utility__block"><img src="./images/loga/html5.png"></div>
+                    <div class="utility__block"><img src="./images/loga/css3.png"></div>
+                    <div class="utility__block"><img src="./images/loga/js.png"></div>
+                    <div class="utility__block"><img src="./images/loga/react.png"></div>
+                    <div class="utility__block"><img src="./images/loga/redux.png"></div>
+                    <div class="utility__block"><img src="./images/loga/graphql.png"></div>
+                    <div class="utility__block"><img src="./images/loga/jquery.png"></div>
+                    <div class="utility__block"><img src=".//images/loga/git.png"></div>
+                    <div class="utility__block"><img src="./images/loga/Npm.png"></div>
+                    <div class="utility__block"><img src="./images/loga/node.png"></div>
+                    <div class="utility__block"><img src="./images/loga/Bootstrap.png"></div>
+                    <div class="utility__block"><img src="./images/loga/mongo.png"></div>
+                    <div class="utility__block"><img src="./images/loga/xd.png"></div>
+                    <div class="utility__block"><img src="./images/loga/gimp.png"></div>
+                    <div class="utility__block"><img src="./images/loga/ps.png"></div>
                 </div>`
             break;
             case 'contact':
@@ -103,12 +103,12 @@ $(document).ready(function(){
             case 'projects':
                 content = `
                     <div class="arrow" id="arrow-up">
-                        <img src="/images/up.png">
+                        <img src="./images/up.png">
                     </div>
                     <div class="projects">
                         <div class="project">
                             <div class="project_box">
-                                <img class="project_img"src="/images/projects/invoicecreator.png"/>
+                                <img class="project_img"src="./images/projects/invoicecreator.png"/>
                                 <div class="project_hoverbox">
                                     <a href="http://www.onet.pl" target="_blank">
                                         <span>LIVE</span>
@@ -123,7 +123,7 @@ $(document).ready(function(){
                         </div>
                         <div class="project">
                             <div class="project_box">
-                                <img class="project_img"src="/images/projects/trt.png"/>
+                                <img class="project_img"src="./images/projects/trt.png"/>
                                 <div class="project_hoverbox">
                                     <a href="http://www.onet.pl" target="_blank">
                                         <span>LIVE</span>
@@ -138,7 +138,7 @@ $(document).ready(function(){
                         </div>
                         <div class="project">
                             <div class="project_box">
-                                <img class="project_img"src="/images/projects/project1.png"/>
+                                <img class="project_img"src="./images/projects/project1.png"/>
                                 <div class="project_hoverbox">
                                     <a href="http://www.onet.pl" target="_blank">
                                         <span>LIVE</span>
@@ -153,7 +153,7 @@ $(document).ready(function(){
                         </div>
                         <div class="project">
                             <div class="project_box">
-                                <img class="project_img"src="/images/projects/hoteljan.png"/>
+                                <img class="project_img"src="./images/projects/hoteljan.png"/>
                                 <div class="project_hoverbox">
                                     <a href="http://hoteljan.com.pl/pl/" target="_blank">
                                         <span>LIVE</span>
@@ -168,7 +168,7 @@ $(document).ready(function(){
                         </div>
                         <div class="project">
                             <div class="project_box">
-                                <img class="project_img"src="/images/projects/project2.png"/>
+                                <img class="project_img"src="./images/projects/project2.png"/>
                                 <div class="project_hoverbox">
                                     <a href="https://olopk.github.io/project3/" target="_blank">
                                         <span>LIVE</span>
@@ -183,7 +183,7 @@ $(document).ready(function(){
                         </div>
                         <div class="project">
                             <div class="project_box">
-                                <img class="project_img"src="/images/projects/project1.png"/>
+                                <img class="project_img"src="./images/projects/project1.png"/>
                                 <div class="project_hoverbox">
                                     <a href="https://olopk.github.io/project2/" target="_blank">
                                         <span>LIVE</span>
@@ -198,7 +198,7 @@ $(document).ready(function(){
                         </div>
                     </div>
                     <div class="arrow" id="arrow-down">
-                        <img src="/images/down.png">
+                        <img src="./images/down.png">
                     </div>
                     `
                     break;
