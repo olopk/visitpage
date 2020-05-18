@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 98vh;
+    height: 95vh;
     transition: all 1s ease-in-out;
     z-index: 10;
 }
@@ -84,7 +84,7 @@ body{
 }
 .navbar__burger{
     display: inline-block;
-    width: 70px;
+    width: 50px;
     /* z-index: 15; */
 }
 .burger__slice{
@@ -109,7 +109,7 @@ body{
 
 /* MAIN CONTENT */
 .maincontent{
-    padding: 0px 30px;
+    padding: 18px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -135,8 +135,7 @@ body{
 }
 /* ABOUT */
 .maincontent__about{
-    font-size: 23px;
-    text-align: center;
+    font-size: 16px;
 }
 /* UTILS */
 .utility{
