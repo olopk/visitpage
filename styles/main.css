@@ -256,9 +256,6 @@ body{
     /* max-height: 17vh; */
     border-radius: 5px;
 }
-.project_text{
-    width: 70vw;
-}
 .project_img--blur{
     filter: blur(2px);
 }
@@ -480,6 +477,9 @@ footer{
     }
     .project_img, .project_hoverbox {
         width: 27vw;
+    }
+    .project_text{
+        width: auto;
     }
     .project__span {
         font-size: 2vw;
