@@ -109,7 +109,6 @@ body{
 
 /* MAIN CONTENT */
 .maincontent{
-    padding: 18px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -135,11 +134,16 @@ body{
 }
 /* ABOUT */
 .maincontent__about{
+    height: 70vh;
+    overflow: auto;
+}
+.about__p{
     font-size: 16px;
+    padding: 10px 12px 0px 12px;
 }
 /* UTILS */
 .utility{
-    padding: 20px;
+    padding: 38px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -158,6 +162,9 @@ body{
     width: 100%;
 }
 /* CONTACT */
+.contact{
+    padding: 0px 25px;
+}
 
 .contact_form label{
     display: block;
@@ -249,6 +256,9 @@ body{
     /* max-height: 17vh; */
     border-radius: 5px;
 }
+.project_text{
+    width: 70vw;
+}
 .project_img--blur{
     filter: blur(2px);
 }
@@ -274,9 +284,10 @@ body{
     align-items: center;
     text-decoration: none;
 }
-.project_hoverbox a span{
+.project__span{
     color: #005E7C;
-    font-size: 12vw;
+    font-size: 5vw;
+    text-align: center;
 }
 .project_text{
     display: none;
@@ -380,7 +391,7 @@ footer{
     .maincontent__name{
         margin: 0 0 20px 0;
     }
-    .maincontent__about{
+    .about__p{
         font-size: 19px;
     }
     .utility{
@@ -407,7 +418,7 @@ footer{
     .project_img, .project_hoverbox{
         width: 42vw;
     }
-    .project_hoverbox a span{
+    .project__span{
         font-size: 7vw;
     }
     .contact{
@@ -450,6 +461,9 @@ footer{
         margin-left: -54px;
     }
     .maincontent__about{
+        height: 60vh;
+    }
+    .about__p{
         padding: 10px 150px;
         text-align: justify;
         text-indent: 30px;
@@ -467,8 +481,8 @@ footer{
     .project_img, .project_hoverbox {
         width: 27vw;
     }
-    .project_hoverbox a span {
-        font-size: 4vw;
+    .project__span {
+        font-size: 2vw;
     }
     .arrow{
         display: none;

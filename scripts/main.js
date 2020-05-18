@@ -49,11 +49,11 @@ $(document).ready(function(){
                     </div>`
                 break;
             case 'about':
-                content = `<p class="maincontent__about">My name is Olek, im 31 years old.
+                content = `<div class="maincontent__about"><p class="about__p">My name is Olek, im 31 years old.
                 Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I've decided to discover the world of writing code. It appears to be pretty tough, very challenging and it looks like never ending journey. So I've decided to get on this train ;) </p>
-                <p class="maincontent__about">Until now i've created a couple of simple webpages for practising HTML5, CSS and JS basics . Next step was trying to write some simple web applications, so i followed the online courses about pure JS and ReactJS on Udemy and YT, and then ive started a comercial project (called Transport Reporting Tool), i wrote the Frontend code in React, and  my friend handled the backend. Now im working on my own private project, where im using React for frontend and Express for backend, the project will be a simple app for smallbussiness invoices handling. Last month i've also started to get familiar with react-native.</p>
-                <p class="maincontent__about">Privately, im very reliable, organized, punctual and logically oriented person. I need to learn and read new things because im hungry for the knowledge and selfimprovement. Im very active person who runs, swims, cycle, play football and takes cold bath in the lake once a week. My biggest achievement is saving a single person life by donating the stem cells four years ago.</p>
-                `
+                <p class="about__p">Until now i've created a couple of simple webpages for practising HTML5, CSS and JS basics . Next step was trying to write some simple web applications, so i followed the online courses about pure JS and ReactJS on Udemy and YT, and then ive started a comercial project (called Transport Reporting Tool), i wrote the Frontend code in React, and  my friend handled the backend. Now im working on my own private project, where im using React for frontend and Express for backend, the project will be a simple app for smallbussiness invoices handling. Last month i've also started to get familiar with react-native.</p>
+                <p class="about__p">Privately, im very reliable, organized, punctual and logically oriented person. I need to learn and read new things because im hungry for the knowledge and selfimprovement. Im very active person who runs, swims, cycle, play football and takes cold bath in the lake once a week. My biggest achievement is saving a single person life by donating the stem cells four years ago.</p>
+                </div>`
                 break;
             case 'tools':
                 content = `
@@ -110,45 +110,42 @@ $(document).ready(function(){
                             <div class="project_box">
                                 <img class="project_img"src="./images/projects/invoicecreator.png"/>
                                 <div class="project_hoverbox">
-                                    <a href="http://www.onet.pl" target="_blank">
-                                        <span>LIVE</span>
+                                    <a href="https://github.com/olopk/invoice-creator" target="_blank">
+                                        <span class="project__span">FrontEnd CODE</span>
                                     </a>
-                                    <a href="http://www.onet.pl" target="_blank">
-                                        <span>CODE</span>
-                                    </a>,
+                                    <a href="https://github.com/olopk/invoice-creatorAPI" target="_blank">
+                                        <span class="project__span">BackEnd CODE</span>
+                                    </a>
                                 </div>
                             </div>
                             <p class="project_text">Private project, still under construction.</p>
-                            <p class="project_text">Stack: HTML5, CSS3, JS, ReactJS, Redux, MongoDB, Express.JS</p>
+                            <p class="project_text">Stack: HTML5, CSS3, AntD, JS, ReactJS, MongoDB, ExpressJS</p>
                         </div>
                         <div class="project">
                             <div class="project_box">
                                 <img class="project_img"src="./images/projects/trt.png"/>
                                 <div class="project_hoverbox">
-                                    <a href="http://www.onet.pl" target="_blank">
-                                        <span>LIVE</span>
-                                    </a>
-                                    <a href="http://www.onet.pl" target="_blank">
-                                        <span>CODE</span>
+                                    <a style="width: 100%"style="cursor: not-allowed">
+                                        <span class="project__span">FrontEnd CODE is available only in private.</span>
                                     </a>
                                 </div>
                             </div>
                             <p class="project_text">Commercial project, still under construction.</p>
-                            <p class="project_text">Stack: HTML5, CSS3, JS, ReactJS, Redux</p>
+                            <p class="project_text">Stack: HTML5, CSS3, MaterialUI, JS, ReactJS, Redux</p>
                         </div>
                         <div class="project">
                             <div class="project_box">
-                                <img class="project_img"src="./images/projects/project1.png"/>
+                                <img class="project_img"src="./images/projects/autorejestr.png"/>
                                 <div class="project_hoverbox">
                                     <a href="http://www.onet.pl" target="_blank">
-                                        <span>LIVE</span>
+                                        <span class="project__span">LIVE</span>
                                     </a>
                                     <a href="http://www.onet.pl" target="_blank">
-                                        <span>CODE</span>
+                                        <span class="project__span">CODE</span>
                                     </a>
                                 </div>
                             </div>
-                            <p class="project_text">Commercial webpage.</p>
+                            <p class="project_text">Commercial webpage (under construction)</p>
                             <p class="project_text">Stack: HTML5, CSS3, JS, JQUERY</p>
                         </div>
                         <div class="project">
@@ -156,10 +153,10 @@ $(document).ready(function(){
                                 <img class="project_img"src="./images/projects/hoteljan.png"/>
                                 <div class="project_hoverbox">
                                     <a href="http://hoteljan.com.pl/pl/" target="_blank">
-                                        <span>LIVE</span>
+                                        <span class="project__span">LIVE</span>
                                     </a>
                                     <a style="cursor: not-allowed">
-                                        <span>CODE</span>
+                                        <span class="project__span">CODE</span>
                                     </a>
                                 </div>
                             </div>
@@ -171,10 +168,10 @@ $(document).ready(function(){
                                 <img class="project_img"src="./images/projects/project2.png"/>
                                 <div class="project_hoverbox">
                                     <a href="https://olopk.github.io/project3/" target="_blank">
-                                        <span>LIVE</span>
+                                        <span class="project__span">LIVE</span>
                                     </a>
                                     <a href="https://github.com/olopk/project3/" target="_blank">
-                                        <span>CODE</span>
+                                        <span class="project__span">CODE</span>
                                     </a>
                                 </div>
                             </div>
@@ -186,10 +183,10 @@ $(document).ready(function(){
                                 <img class="project_img"src="./images/projects/project1.png"/>
                                 <div class="project_hoverbox">
                                     <a href="https://olopk.github.io/project2/" target="_blank">
-                                        <span>LIVE</span>
+                                        <span class="project__span">LIVE</span>
                                     </a>
                                     <a href="https://github.com/olopk/project2" target="_blank">
-                                        <span>CODE</span>
+                                        <span class="project__span">CODE</span>
                                     </a>
                                 </div>
                             </div>
