@@ -33,8 +33,6 @@ $(document).ready(function(){
         const link = event.target.getAttribute('href').slice(1)
         let content;
 
-        $(".nav-blocks__block").removeClass('nav-blocks__block--active').animate({backgroundColor: '#fff'}, 1000);
-
         switch(link){
             case 'home':
                 content = `
@@ -58,7 +56,7 @@ $(document).ready(function(){
             case 'tools':
                 content = `
                 <div class="utility">
-                    <div class="utility__block"><img src="./images/loga/html5.png"></div>
+                    <div class="utility__block"><img src="./images/loga/html5.png"><p class="utility__p">HTML5</p></div>
                     <div class="utility__block"><img src="./images/loga/css3.png"></div>
                     <div class="utility__block"><img src="./images/loga/js.png"></div>
                     <div class="utility__block"><img src="./images/loga/react.png"></div>
@@ -201,7 +199,8 @@ $(document).ready(function(){
                     `
                     break;
         }
-        $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 1000);        
+        $(".nav-blocks__block--active").removeClass('nav-blocks__block--active').animate({backgroundColor: '#fff'}, 800);
+        $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 800);        
         $(".maincontent").html(content).css("display", "none").fadeIn(1200);
     })
         
