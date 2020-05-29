@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link href="=/styles/reset_styles.css" rel="stylesheet" type="=text/css"> -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link href="./styles/main.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
     <title>CV Page</title>
@@ -49,14 +47,170 @@
             </nav>
         </header>
         <section class="maincontent">
-            
+            <div class="maincontent__home">
+                <p class="home__name">Aleksander Wojas</p>
+                <div class="home__logo">
+                    <div class="home__letter--a">
+                            <img src="./images/A.png" alt="A">
+                    </div>
+                    <div class="home__letter--w">
+                        <img src="./images/W.png" alt="W">
+                    </div>
+                </div>
+            </div>
+            <div class="maincontent__about">
+                <p class="about__p">My name is Olek, im 31 years old.
+                    Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I've decided to discover the world of writing code. It appears to be pretty tough, very challenging and it appears to be a never ending learning story. So I've decided to get on this train ;) </p>
+                <p class="about__p">Until now i've created a couple of simple webpages for practising HTML5, CSS3 and JS (ES6 based) basics . And after that, the natural sequence of events pushed me to write some simple web applications, so i followed the online courses about pure JS and ReactJS on Udemy and YT, and then ive started a comercial project (called Transport Reporting Tool), i wrote the Frontend code in React, and  my friend handled the backend. Now im working on my own private project, where im using React for frontend and Express for backend, the project will be a simple app for smallbussiness invoices handling. Last month i've also started to get familiar with react-native.</p>
+                <p class="about__p">Privately, im very reliable, organized, punctual and logically oriented person. I need to learn and read new things because im hungry for the knowledge and selfimprovement. Im very active person who runs, swims, rides a bicycle, plays football and takes cold bath in the lake once a week. My biggest achievement is saving a single person life by donating the stem cells four years ago.</p>
+            </div>
+            <div class="maincontent__tools">
+                <div class="tools">
+                    <div class="tools__block"><p class="tools__p">HTML5</p><img src="./images/loga/html5.png"></div>
+                    <div class="tools__block"><p class="tools__p">CSS3</p><img src="./images/loga/css3.png"></div>
+                    <div class="tools__block"><p class="tools__p">JS</p><img src="./images/loga/js.png"></div>
+                    <div class="tools__block"><p class="tools__p">React</p><img src="./images/loga/react.png"></div>
+                    <div class="tools__block"><p class="tools__p">Redux</p><img src="./images/loga/redux.png"></div>
+                    <div class="tools__block"><p class="tools__p">JQuery</p><img src="./images/loga/jquery.png"></div>
+                    <div class="tools__block"><p class="tools__p">GraphQL</p><img src="./images/loga/graphql.png"></div>
+                    <div class="tools__block"><p class="tools__p">Git</p><img src=".//images/loga/git.png"></div>
+                    <div class="tools__block"><p class="tools__p">NPM</p><img src="./images/loga/Npm.png"></div>
+                    <div class="tools__block"><p class="tools__p">NodeJS</p><img src="./images/loga/node.png"></div>
+                    <div class="tools__block"><p class="tools__p">MaterialUI</p><img src="./images/loga/material.png"></div>
+                    <div class="tools__block"><p class="tools__p">AntD</p><img src="./images/loga/antd.png"></div>
+                    <div class="tools__block"><p class="tools__p">MongoDB</p><img src="./images/loga/mongo.png"></div>
+                    <div class="tools__block"><p class="tools__p">Adobe XD</p><img src="./images/loga/xd.png"></div>
+                    <div class="tools__block"><p class="tools__p">Gimp</p><img src="./images/loga/gimp.png"></div>
+                    <div class="tools__block"><p class="tools__p">Adobe PS</p><img src="./images/loga/ps.png"></div>
+                </div>
+            </div>
+            <div class="maincontent__projects">
+                <div class="arrow" id="arrow-up">
+                    <img src="./images/up.png">
+                </div>
+                <div class="projects">
+                    <div class="project">
+                        <div class="project__box">
+                            <img class="project__img"src="./images/projects/invoicecreator.png"/>
+                            <div class="project__hoverbox">
+                                <a href="https://github.com/olopk/invoice-creator" target="_blank">
+                                    <span class="project__span">FrontEnd CODE</span>
+                                </a>
+                                <a href="https://github.com/olopk/invoice-creatorAPI" target="_blank">
+                                    <span class="project__span">BackEnd CODE</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project__text">Private project, still under construction.</p>
+                        <p class="project__text">Stack: HTML5, CSS3, AntD, JS, ReactJS, MongoDB, GraphQL, ExpressJS</p>
+                    </div>
+                    <div class="project">
+                        <div class="project__box">
+                            <img class="project__img"src="./images/projects/trt.png"/>
+                            <div class="project__hoverbox">
+                                <a style="width: 100%"style="cursor: not-allowed">
+                                    <span class="project__span">FrontEnd CODE is available only in private.</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project__text">Commercial project, still under construction.</p>
+                        <p class="project__text">Stack: HTML5, CSS3, MaterialUI, JS, ReactJS, Redux, REST</p>
+                    </div>
+                    <div class="project">
+                        <div class="project__box">
+                            <img class="project__img"src="./images/projects/autorejestr.png"/>
+                            <div class="project__hoverbox">
+                                <a href="https://olopk.github.io/autorejestr" target="_blank">
+                                    <span class="project__span">LIVE</span>
+                                </a>
+                                <a href="https://github.com/olopk/autorejestr" target="_blank">
+                                    <span class="project__span">CODE</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project__text">Commercial webpage (under construction)</p>
+                        <p class="project__text">Stack: HTML5, CSS3, JS, JQUERY</p>
+                    </div>
+                    <div class="project">
+                        <div class="project__box">
+                            <img class="project__img"src="./images/projects/hoteljan.png"/>
+                            <div class="project__hoverbox">
+                                <a href="http://hoteljan.com.pl/pl/" target="_blank">
+                                    <span class="project__span">LIVE</span>
+                                </a>
+                                <a style="cursor: not-allowed">
+                                    <span class="project__span">CODE</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project__text">Commercial webpage.</p>
+                        <p class="project__text">Stack: HTML5, CSS3, JS, JQUERY</p>
+                    </div>
+                    <div class="project">
+                        <div class="project__box">
+                            <img class="project__img"src="./images/projects/project2.png"/>
+                            <div class="project__hoverbox">
+                                <a href="https://olopk.github.io/project3/" target="_blank">
+                                    <span class="project__span">LIVE</span>
+                                </a>
+                                <a href="https://github.com/olopk/project3/" target="_blank">
+                                    <span class="project__span">CODE</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project__text">Second learning project.</p>
+                        <p class="project__text">Stack: HTML5, CSS3, JS</p>
+                    </div>
+                    <div class="project">
+                        <div class="project__box">
+                            <img class="project__img"src="./images/projects/project1.png"/>
+                            <div class="project__hoverbox">
+                                <a href="https://olopk.github.io/project2/" target="_blank">
+                                    <span class="project__span">LIVE</span>
+                                </a>
+                                <a href="https://github.com/olopk/project2" target="_blank">
+                                    <span class="project__span">CODE</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project__text">First learning project.</p>
+                        <p class="project__text">Stack: HTML5, CSS3, JS</p>
+                    </div>
+                </div>
+                <div class="arrow" id="arrow-down">
+                    <img src="./images/down.png">
+                </div>
+            </div>
+            <div class="maincontent__contact">
+                <div class="contact">
+                    <div class="contact__response"></div>
+                    <form class="contact__form">
+                        <div class="form__leftside">
+                            <label for="name">name</label>
+                            <input class="contact__input" name="name" id="name"/>
+                            <label for="email">email</label>
+                            <input class="contact__input" name="email" id="email"/>
+                            <label for="nr">contact nr</label>
+                            <input class="contact__input" name="nr" id="nr"/>
+                        </div>
+                        <div class="form__rightside">
+                            <div>
+                                <label for="message">message</label>
+                                <textarea class="contact__textarea" rows="5" name="message" id="message"></textarea>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <button class="contact__btn contact__btn--reset">CLEAR</button>
+                                <button class="contact__btn contact__btn--send">SEND</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
         <footer>
-            <div class="github">
-                <a href="mailto:olekwojas@gmail.com"><img src="./images/loga/gmail.png" alt="Gmail"></a>
-                <a href="https://github.com/olopk" target="_blank"><img src="./images/loga/github.png" alt="Github"></a>
-                <a href="https://www.facebook.com/Olo7PL" target="_blank"><img src="./images/loga/fb.png" alt="Facebook"></a>
-            </div>
+            <a href="mailto:olekwojas@gmail.com"><img src="./images/loga/gmail.png" alt="Gmail"></a>
+            <a href="https://github.com/olopk" target="_blank"><img src="./images/loga/github.png" alt="Github"></a>
+            <a href="https://www.facebook.com/Olo7PL" target="_blank"><img src="./images/loga/fb.png" alt="Facebook"></a>
         </footer>
     </div>
 </body>
