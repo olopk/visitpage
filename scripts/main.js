@@ -1,6 +1,6 @@
 $(document).ready(function(){
-    // SIDEDRAWER LOGIC
 
+    // SIDEDRAWER LOGIC
     $(".navbar__burger").click(()=>{
         $(".main-container").addClass("main-container--blur");
         $(".sidedrawer").addClass("sidedrawer--visible");
@@ -11,21 +11,8 @@ $(document).ready(function(){
             $(".main-container").removeClass("main-container--blur");
         }
     })
-
     // DEFAULT MAINCONTENT SET
-
-    $(".maincontent").html(
-        `<p class="maincontent__name">Aleksander Wojas</p>
-        <div class="maincontent__logo">
-            <div class="maincontent__letter--a">
-                <img src="./images/A.png" alt="A">
-            </div>
-            <div class="maincontent__letter--w">
-                <img src="./images/W.png" alt="W">
-            </div>
-        </div>`
-    )
-    $(".maincontent__letter--a img").css('margin-right', '0px').delay(1200).animate({'margin-right': '-33px'}, 1000)
+    $(".home__letter--a img").css('margin-right', '0px').delay(1200).animate({'margin-right': '-33px'}, 1000)
     
     // RENDERING THE PROPER CONTENT DEPEND ON CLICKED LINK
     $(".sidedrawer__nav ul li a, .navbar__nav ul li a,.nav-blocks__block").click(()=>{
@@ -35,207 +22,63 @@ $(document).ready(function(){
 
         switch(link){
             case 'home':
-                content = `
-                    <p class="maincontent__name">Aleksander Wojas</p>
-                    <div class="maincontent__logo">
-                        <div class="maincontent__letter--a">
-                            <img src="./images/A.png" alt="A">
-                        </div>
-                        <div class="maincontent__letter--w">
-                            <img src="./images/W.png" alt="W">
-                        </div>
-                    </div>`
+                content = 'home'
                 break;
             case 'about':
-                content = `<div class="maincontent__about"><p class="about__p">My name is Olek, im 31 years old.
-                Until now I've used to work as a sysadmin, but I didn't feel it challenging me anymore so I've decided to discover the world of writing code. It appears to be pretty tough, very challenging and it appears to be a never ending learning story. So I've decided to get on this train ;) </p>
-                <p class="about__p">Until now i've created a couple of simple webpages for practising HTML5, CSS3 and JS (ES6 based) basics . And after that, the natural sequence of events pushed me to write some simple web applications, so i followed the online courses about pure JS and ReactJS on Udemy and YT, and then ive started a comercial project (called Transport Reporting Tool), i wrote the Frontend code in React, and  my friend handled the backend. Now im working on my own private project, where im using React for frontend and Express for backend, the project will be a simple app for smallbussiness invoices handling. Last month i've also started to get familiar with react-native.</p>
-                <p class="about__p">Privately, im very reliable, organized, punctual and logically oriented person. I need to learn and read new things because im hungry for the knowledge and selfimprovement. Im very active person who runs, swims, rides a bicycle, plays football and takes cold bath in the lake once a week. My biggest achievement is saving a single person life by donating the stem cells four years ago.</p>
-                </div>`
+                content = 'about'
                 break;
             case 'tools':
-                content = `
-                <div class="utility">
-                    <div class="utility__block"><img src="./images/loga/html5.png"><p class="utility__p">HTML5</p></div>
-                    <div class="utility__block"><img src="./images/loga/css3.png"></div>
-                    <div class="utility__block"><img src="./images/loga/js.png"></div>
-                    <div class="utility__block"><img src="./images/loga/react.png"></div>
-                    <div class="utility__block"><img src="./images/loga/redux.png"></div>
-                    <div class="utility__block"><img src="./images/loga/graphql.png"></div>
-                    <div class="utility__block"><img src="./images/loga/jquery.png"></div>
-                    <div class="utility__block"><img src=".//images/loga/git.png"></div>
-                    <div class="utility__block"><img src="./images/loga/Npm.png"></div>
-                    <div class="utility__block"><img src="./images/loga/node.png"></div>
-                    <div class="utility__block"><img src="./images/loga/Bootstrap.png"></div>
-                    <div class="utility__block"><img src="./images/loga/mongo.png"></div>
-                    <div class="utility__block"><img src="./images/loga/xd.png"></div>
-                    <div class="utility__block"><img src="./images/loga/gimp.png"></div>
-                    <div class="utility__block"><img src="./images/loga/ps.png"></div>
-                </div>`
+                content = 'tools'
             break;
             case 'contact':
-                content = `
-                    <div class="contact">
-                        <div class="contact_response"></div>
-                        <form class="contact_form">
-                            <div class="form__leftside">
-                                <label for="name">name</label>
-                                <input class="contact_input" name="name" id="name"/>
-                                <label for="email">email</label>
-                                <input class="contact_input" name="email" id="email"/>
-                                <label for="nr">contact nr</label>
-                                <input class="contact_input" name="nr" id="nr"/>
-                            </div>
-                            <div class="form__rightside">
-                                <div>
-                                    <label for="message">message</label>
-                                    <textarea class="contact_textarea" rows="5" name="message" id="message"></textarea>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-                                    <button class="contact_btn contact_btn--reset">CLEAR</button>
-                                    <button class="contact_btn contact_btn--send">SEND</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>`
+                content = 'contact'                    
                 break;
             case 'projects':
-                content = `
-                    <div class="arrow" id="arrow-up">
-                        <img src="./images/up.png">
-                    </div>
-                    <div class="projects">
-                        <div class="project">
-                            <div class="project_box">
-                                <img class="project_img"src="./images/projects/invoicecreator.png"/>
-                                <div class="project_hoverbox">
-                                    <a href="https://github.com/olopk/invoice-creator" target="_blank">
-                                        <span class="project__span">FrontEnd CODE</span>
-                                    </a>
-                                    <a href="https://github.com/olopk/invoice-creatorAPI" target="_blank">
-                                        <span class="project__span">BackEnd CODE</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="project_text">Private project, still under construction.</p>
-                            <p class="project_text">Stack: HTML5, CSS3, AntD, JS, ReactJS, MongoDB, GraphQL, ExpressJS</p>
-                        </div>
-                        <div class="project">
-                            <div class="project_box">
-                                <img class="project_img"src="./images/projects/trt.png"/>
-                                <div class="project_hoverbox">
-                                    <a style="width: 100%"style="cursor: not-allowed">
-                                        <span class="project__span">FrontEnd CODE is available only in private.</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="project_text">Commercial project, still under construction.</p>
-                            <p class="project_text">Stack: HTML5, CSS3, MaterialUI, JS, ReactJS, Redux, REST</p>
-                        </div>
-                        <div class="project">
-                            <div class="project_box">
-                                <img class="project_img"src="./images/projects/autorejestr.png"/>
-                                <div class="project_hoverbox">
-                                    <a href="https://olopk.github.io/autorejestr" target="_blank">
-                                        <span class="project__span">LIVE</span>
-                                    </a>
-                                    <a href="https://github.com/olopk/autorejestr" target="_blank">
-                                        <span class="project__span">CODE</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="project_text">Commercial webpage (under construction)</p>
-                            <p class="project_text">Stack: HTML5, CSS3, JS, JQUERY</p>
-                        </div>
-                        <div class="project">
-                            <div class="project_box">
-                                <img class="project_img"src="./images/projects/hoteljan.png"/>
-                                <div class="project_hoverbox">
-                                    <a href="http://hoteljan.com.pl/pl/" target="_blank">
-                                        <span class="project__span">LIVE</span>
-                                    </a>
-                                    <a style="cursor: not-allowed">
-                                        <span class="project__span">CODE</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="project_text">Commercial webpage.</p>
-                            <p class="project_text">Stack: HTML5, CSS3, JS, JQUERY</p>
-                        </div>
-                        <div class="project">
-                            <div class="project_box">
-                                <img class="project_img"src="./images/projects/project2.png"/>
-                                <div class="project_hoverbox">
-                                    <a href="https://olopk.github.io/project3/" target="_blank">
-                                        <span class="project__span">LIVE</span>
-                                    </a>
-                                    <a href="https://github.com/olopk/project3/" target="_blank">
-                                        <span class="project__span">CODE</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="project_text">Second learning project.</p>
-                            <p class="project_text">Stack: HTML5, CSS3, JS</p>
-                        </div>
-                        <div class="project">
-                            <div class="project_box">
-                                <img class="project_img"src="./images/projects/project1.png"/>
-                                <div class="project_hoverbox">
-                                    <a href="https://olopk.github.io/project2/" target="_blank">
-                                        <span class="project__span">LIVE</span>
-                                    </a>
-                                    <a href="https://github.com/olopk/project2" target="_blank">
-                                        <span class="project__span">CODE</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <p class="project_text">First learning project.</p>
-                            <p class="project_text">Stack: HTML5, CSS3, JS</p>
-                        </div>
-                    </div>
-                    <div class="arrow" id="arrow-down">
-                        <img src="./images/down.png">
-                    </div>
-                    `
-                    break;
+                content = 'projects'
+                break;
         }
         $(".nav-blocks__block--active").removeClass('nav-blocks__block--active').animate({backgroundColor: '#fff'}, 800);
-        $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 800);        
-        $(".maincontent").html(content).css("display", "none").fadeIn(1200);
-    })
-        
+        $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 800);
+        $(".maincontent").children().css("display", "none");      
+        $(".maincontent__"+content).css("display", "none").fadeIn(1200);
+    })        
 
 // MAINCONTENT ONCLICK ACTIONS
     $('.maincontent').click((e)=>{
+
     //PROJECTS SECTION
         // PROJECTS SCROLLING
-    if($(e.target).is("#arrow-down img, #arrow-down")){
-        const scrollValue = window.innerHeight * 0.63;
-        const currentScroll = $(".projects").scrollTop();
-        $(".projects").animate({scrollTop: currentScroll+scrollValue}, 800)
-    }
-    if($(e.target).is("#arrow-up img, #arrow-up")){
-        const scrollValue = window.innerHeight * 0.63;
-        const currentScroll = $(".projects").scrollTop();
-        $(".projects").animate({scrollTop: currentScroll-scrollValue}, 800)
-    }
+        if($(e.target).is("#arrow-down img, #arrow-down")){
+            const scrollValue = window.innerHeight * 0.63;
+            const currentScroll = $(".projects").scrollTop();
+            $(".projects").animate({scrollTop: currentScroll+scrollValue}, 800)
+        }
+        if($(e.target).is("#arrow-up img, #arrow-up")){
+            const scrollValue = window.innerHeight * 0.63;
+            const currentScroll = $(".projects").scrollTop();
+            $(".projects").animate({scrollTop: currentScroll-scrollValue}, 800)
+        }
         //SHOWING AND HIDING PROJECTS INFO
-    if($(e.target).parent().is('.project_box')){
-        $('.project_hoverbox').fadeOut('slow')
-        $('.project_text').slideUp('slow')
-        $(e.target).siblings('.project_hoverbox').css('display', 'flex').hide().fadeIn('slow')
-        $(e.target).parent().siblings($('.project_text')).slideDown('slow')
-        return
-    }
-    if($('.maincontent').has('.projects').length){
-        $('.project_hoverbox').fadeOut('slow')
-        $('.project_text').slideUp('slow')
-        return;
-    }
-
+        if($(e.target).parent().is('.project__box')){
+            $('.project__hoverbox').fadeOut('slow')
+            $('.project__text').slideUp('slow')
+            $(e.target).siblings('.project__hoverbox').css('display', 'flex').hide().fadeIn('slow')
+            $(e.target).parent().siblings($('.project__text')).slideDown('slow')
+            return
+        }
+        if($('.maincontent').has('.projects').length){
+            $('.project__hoverbox').fadeOut('slow')
+            $('.project__text').slideUp('slow')
+            return;
+        }
+    // UTILS SECTION
+    // if($(e.target).parent().is('.tools__block')){
+    //     console.log(this)
+    // }    
+})
     // CONTACT FORM SECTION
         // SENDING MSG
-        if($(e.target).is(".contact_btn--send")){
+        $(".contact__btn--send").click(()=>{
             event.preventDefault();
 
             const content = $(".maincontent").html();
@@ -243,19 +86,19 @@ $(document).ready(function(){
             const email = $("#email").val();
             const phone = $("#nr").val();
             const msg = $("#message").val();
-            $(".contact_response").empty()
-           
+            $(".contact__response").empty()
+        
             if(name === ''|| email === ''|| phone === '' || msg === ''){
-                $(".contact_response").append('<p>All form fields are required</p>');
+                $(".contact__response").append('<p>All form fields are required</p>');
                 return
             }
             if(!/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email)){
-                $('.contact_response').append('<p>Please insert a valid email number</p>');
+                $('.contact__response').append('<p>Please insert a valid email number</p>');
                 return
             }
 
             if(!/^([\+\d]\d{1,2}|\([\+\d]\d{1,2}\))\d{4,9}$/.test(phone)){
-                $('.contact_response').append('<p>Please insert a valid phone number</p>');
+                $('.contact__response').append('<p>Please insert a valid phone number</p>');
                 return
             }
 
@@ -270,26 +113,25 @@ $(document).ready(function(){
                 Body : `name: ${name}, email: ${email}, nr: ${phone}, message: ${msg}`
             }).then(message => {
                 $(".maincontent").html(content)
-                $(".contact_response").empty()
+                $(".contact__response").empty()
                 if(message == 'OK'){
-                    $('.contact_response').append('<p>Message sent successfully!</p>')
+                    $('.contact__response').append('<p>Message sent successfully!</p>')
                 }else{
-                    $('.contact_response').append('<p>Something went wrong!</p><p>error code: ${message}</p>');
+                    $('.contact__response').append('<p>Something went wrong!</p><p>error code: ${message}</p>');
                     $("#name").val(name);
                     $("#email").val(email);
                     $("#nr").val(phone);
                     $("#message").val(msg);                
                 }
             }).catch(err => {
-                $('.contact_response').append(`<p>Something went wrong, try later or send me the error beneath to olekwojas@gmail.com, thank you!.</p><p>${err}</p>`)
+                $('.contact__response').append(`<p>Something went wrong, try later or send me the error beneath to olekwojas@gmail.com, thank you!.</p><p>${err}</p>`)
             })
             return;
-        }
+        })
         // CLEARING FORM
-        if($(e.target).is(".contact_btn--reset")){
-            event.preventDefault();
-            $(".contact_input, .contact_textarea").val("");
-            return;
-        }
-    })
+           $(".contact__btn--reset").click(()=>{
+                event.preventDefault();
+                $(".contact__input, .contact__textarea").val("");
+                return;
+            })
 })
