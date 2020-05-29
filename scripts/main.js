@@ -78,6 +78,7 @@ $(document).ready(function(){
             case 'contact':
                 content = `
                     <div class="contact">
+                        <div class="contact_response"></div>
                         <form class="contact_form">
                             <div class="form__leftside">
                                 <label for="name">name</label>
@@ -201,7 +202,7 @@ $(document).ready(function(){
                     break;
         }
         $("#"+link).addClass('nav-blocks__block--active').animate({backgroundColor: '#0096B3'}, 1000);        
-        $(".maincontent").html(content).css("display", "none").fadeIn(1500);
+        $(".maincontent").html(content).css("display", "none").fadeIn(1200);
     })
         
 
@@ -237,11 +238,27 @@ $(document).ready(function(){
         // SENDING MSG
         if($(e.target).is(".contact_btn--send")){
             event.preventDefault();
+
             const content = $(".maincontent").html();
             const name = $("#name").val();
             const email = $("#email").val();
             const phone = $("#nr").val();
             const msg = $("#message").val();
+            $(".contact_response").empty()
+           
+            if(name === ''|| email === ''|| phone === '' || msg === ''){
+                $(".contact_response").append('<p>All form fields are required</p>');
+                return
+            }
+            if(!/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email)){
+                $('.contact_response').append('<p>Please insert a valid email number</p>');
+                return
+            }
+
+            if(!/^([\+\d]\d{1,2}|\([\+\d]\d{1,2}\))\d{4,9}$/.test(phone)){
+                $('.contact_response').append('<p>Please insert a valid phone number</p>');
+                return
+            }
 
             $(".maincontent").html(`
                 <div class="loader">Loading...</div>
@@ -253,21 +270,19 @@ $(document).ready(function(){
                 Subject : "Formularz kontaktowy z CV-page",
                 Body : `name: ${name}, email: ${email}, nr: ${phone}, message: ${msg}`
             }).then(message => {
+                $(".maincontent").html(content)
+                $(".contact_response").empty()
                 if(message == 'OK'){
-                    const resp = `<div class="contact_response"><p>Message sent successfully!</p></div></div>`
-                    $(".maincontent").html(content)
-                    $(resp).insertBefore(".contact");
+                    $('.contact_response').append('<p>Message sent successfully!</p>')
                 }else{
-                    const resp = `<div class="contact_response contact_response--fail"><p>Something went wrong!</p><p>error code: ${message}</p></div></div>`
-                    $(resp).insertBefore(".maincontent");
-                    $(".maincontent").html(content)
+                    $('.contact_response').append('<p>Something went wrong!</p><p>error code: ${message}</p>');
                     $("#name").val(name);
                     $("#email").val(email);
                     $("#nr").val(phone);
                     $("#message").val(msg);                
                 }
             }).catch(err => {
-                $(".maincontent").html(`<div class="contact_response"><p>Something went wrong, try later or send me the error beneath to olekwojas@gmail.com, thank you!.</p><p>${err}</p></div>`)
+                $('.contact_response').append(`<p>Something went wrong, try later or send me the error beneath to olekwojas@gmail.com, thank you!.</p><p>${err}</p>`)
             })
             return;
         }
