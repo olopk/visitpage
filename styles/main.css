@@ -312,6 +312,7 @@ body{
     text-align: center;
     margin: 1vh 8vw 0 8vw;
     font-size: 0.75rem;
+    width: 90%;
 }
 .contact__response{
     font-size: 1rem;
