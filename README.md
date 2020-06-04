@@ -16,4 +16,4 @@ Private project
 
 Aleksander Wojas
 </br>
-[Live version](olekwojas.pl)
+[Live version](http://olekwojas.pl)
