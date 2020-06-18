@@ -282,6 +282,7 @@ body{
 }
 .project__hoverbox{
     display: none;
+    flex-wrap: wrap;
     border-radius: 5px;
     width: 70vw;
     height: 100%;
@@ -294,7 +295,7 @@ body{
 }
 
 .project__hoverbox a{
-    width: 50%;
+    width: 49%;
     /* height: 98%; */
     /* border-radius: 5px; */
     display: flex;
@@ -312,7 +313,7 @@ body{
     text-align: center;
     margin: 1vh 8vw 0 8vw;
     font-size: 0.75rem;
-    width: 90%;
+    width: 70vw;
 }
 .contact__response{
     font-size: 1rem;
@@ -516,7 +517,7 @@ footer img{
     .project{
         width: 50%;
     }
-    .project__img, .project__hoverbox{
+    .project__img, .project__hoverbox, .project__text{
         width: 42vw;
     }
     .project__span {
@@ -569,7 +570,7 @@ footer img{
     .project{
         width: 30%;
     }
-    .project__img, .project__hoverbox {
+    .project__img, .project__hoverbox, .project__text {
         width: 25vw;
     }
     .project__span {
